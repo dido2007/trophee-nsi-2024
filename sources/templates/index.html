@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Genesis Web - H&H Team</title>
+  </head>
+  <body>
+    <div id="home" class="hero">
+      <div class="hero-content">
+        <h1>Genesis Web - H&H Team</h1>
+        <p>
+          Merci d'être venu sur ce site. Nous sommes deux étudiants de première
+          du lycée Gustave Flaubert Hedi Fourati et Hedi Fourati (mêmes noms et
+          prenoms) et nous avons eu l'ambition de recréer Google. Bonne visite !
+        </p>
+        <button type="button" onclick="window.location.href = '#oursearch';">
+          Rechercher sur nos donnees
+        </button>
+        <button type="button" onclick="window.location.href = '#yoursearch';">
+          Tester le crawler
+        </button>
+      </div>
+    </div>
+    <section class="hero" id="oursearch">
+      <div class="hero-content">
+        <h2>Recherchez sur nos donnees</h2>
+        <a href="#home">Accueil</a>
+        <p>Entrez un mot-clé pour rechercher un site internet.</p>
+        <form id="keyword-form">
+          <input id="key" name="key" type="text" placeholder="Trophée NSI " />
+          <button type="submit">Envoyer</button>
+        </form>
+        <div class="container" id="results"></div>
+      </div>
+    </section>
+    <section class="hero" id="yoursearch">
+      <div class="hero-content">
+        <h2>Tester le crawler</h2>
+        <a href="#home">Accueil</a>
+        <p>Entrez le lien d'un site internet</p>
+        <i
+          >Le crawler navigera sur ce site internet et tout les sites aux
+          alentours durant 25 secondes pour vous montrer comment ca fonctionne.
+          Un crawler navigue normalement a l'infini pour decouvrir toutes les
+          pages en temps reel, nous avons limiter ici a titre d'exemple.</i
+        >
+        <br />
+
+        <form id="crawler-form">
+          <input
+            id="url"
+            name="url"
+            type="text"
+            placeholder="www.exemple.com"
+          />
+          <button type="button" onclick="testerCrawler()">Tester</button>
+        </form>
+        <div id="countdown" style="display: none">25</div>
+        <div class="container" id="results-crawlers"></div>
+
+        <form id="indexation-crawler-form">
+          <input
+            id="crawler-key"
+            name="crawler-key"
+            type="text"
+            placeholder="Trophée NSI"
+          />
+          <button type="button" onclick="testerCrawlerKeywords()">
+            Envoyer
+          </button>
+        </form>
+        <div class="container" id="index-crawler-results"></div>
+      </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

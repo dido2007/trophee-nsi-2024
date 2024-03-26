@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #f8f9fa;
+    color: #202124;
+  }
+
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .hero-content {
+    max-width: 640px;
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #1a0dab;
+  }
+
+  .hero-content p {
+    margin-bottom: 2rem;
+  }
+
+  .hero-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .hero-content input,
+  .hero-content button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 1rem;
+    border-radius: 24px;
+    border: 1px solid #dfe1e5;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .hero-content input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.5);
+  }
+
+  .hero-content button {
+    background-color: #1a0dab;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+  }
+
+  .hero-content button:hover {
+    background-color: #d93025;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .result {
+    border-bottom: 1px solid #dfe1e5;
+    padding: 12px 0;
+  }
+
+  .result:last-child {
+    border-bottom: none;
+  }
+
+  .title a {
+    color: #1a0dab;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .title a:hover {
+    text-decoration: underline;
+  }
+
+  .url {
+    color: #202124;
+    font-size: 12px;
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+  }
+
+  .description {
+    color: #4d5156;
+    font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .hero-content p,
+    .hero-content form {
+      width: 100%;
+    }
+  }
+  #countdown {
+font-size: 20px;
+color: #ffffff; /* Texte blanc */
+background-color: #1a0dab; /* Fond bleu foncé */
+font-family: 'Courier New', Courier, monospace; /* Police adaptée pour un compte à rebours */
+padding: 10px;
+display: block; /* Assurez-vous qu'il est toujours visible pour le test */
+animation: pulseChange 0.5s ease-in-out;
+}
+
+@keyframes pulseChange {
+0% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.1);
+}
+100% {
+transform: scale(1);
+}
+}
